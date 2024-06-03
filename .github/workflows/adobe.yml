@@ -16,7 +16,8 @@ jobs:
 
       - name: 下载 Adobe 规则
         run: |
-          curl -L https://raw.githubusercontent.com/ignaciocastro/adobe-is-dumb/main/list.txt -o adobe.list
+          #curl -L https://raw.githubusercontent.com/ignaciocastro/adobe-is-dumb/main/list.txt -o adobe.list
+          curl -L https://a.dove.isdumb.one/list.txt -o adobe.list
           sed -i 's/0\.0\.0\.0 /DOMAIN,/g' adobe.list
           # 检查Clash文件夹是否存在，如果不存在则创建
           if [ ! -d "Clash" ]; then
